@@ -1,11 +1,10 @@
-import './App.css';
-
+import { Provider } from "react-redux";
+import Body from "./components/Body";
+import appStore from "./untils/appStore";
 function App() {
-  return (
-    <h1 className='text-red-700'>
-      NetflixGpt
-    </h1>
-  );
+  return <Provider store={appStore}>
+    <Body />
+  </Provider>
 }
 
 export default App;
